@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://customaise.com/icon-128.png" alt="Customaise" width="80" />
+<img src="https://raw.githubusercontent.com/getcustomaise/.github/main/profile/customaise-logo.svg" alt="Customaise" width="80" />
 
 # Customaise
 
