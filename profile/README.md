@@ -49,9 +49,9 @@ If you already use an AI coding agent, connect it directly to Customaise. Create
 }
 ```
 
-12 tools available: script lifecycle, DOM snapshots, console logs, screenshots, tab management, and guided workflows.
+13 tools available: script lifecycle, visual DOM targeting, browser context, screenshots with element highlighting, and guided workflows.
 
-Compatible with Cursor, Claude Code, Windsurf, Antigravity, and any MCP-compatible editor. Power User plan required.
+Compatible with Cursor, Claude Code, Windsurf, Kiro, Antigravity, and any MCP-compatible editor. Power User plan required.
 
 [View MCP docs and source](https://github.com/getcustomaise/customaise-mcp)
 
