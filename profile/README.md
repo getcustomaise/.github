@@ -67,7 +67,16 @@ If you already use an AI coding agent, connect it directly to Customaise. Read, 
 
 ## Safe by design
 
-Scripts only touch the visual layer. They can change how a page looks and behaves, but cannot reach backends, databases, or internal APIs. `@grant` declares which browser APIs a script is allowed to use; no declaration, no access. Every edit creates a restore point; undo anything, anytime. Conversations stay encrypted on your device, and your prompts are never used to train models.
+Every capability a script or agent wants is declared up front and enforced by the extension.
+
+- **`@grant` for browser APIs.** A script lists which `GM_*` APIs it needs; no declaration, no access. No `GM_xmlhttpRequest`, no network calls, full stop.
+- **`@connect` for network hosts.** Any request a script makes is gated to an explicit allowlist of hosts in the metadata block.
+- **SRI on `@require` and `@resource`.** Third-party code pulled in by a script is integrity-checked before it runs.
+- **Per-tool consent for AgentScripts.** Each WebMCP tool is `allow`, `prompt`, or `deny`. Prompt-gated tools pause and wait for your explicit OK, per call. "Always allow" and "Always deny" persist per script, per tool.
+- **Remote HITL.** Sensitive calls can route to your Account Portal and wait for approval from any signed-in browser, including your phone. Tool arguments are KMS-encrypted at rest.
+- **Origin-locked MCP bridge.** The local WebSocket the MCP server uses only accepts connections from known Customaise extension IDs. A random webpage cannot reach it.
+- **Restore points on every edit.** Unlimited undo. Nothing is ever lost.
+- **On-device chat encryption.** AES-256-GCM with a key only you control. Your prompts are never used to train models.
 
 ## Pricing
 
