@@ -41,14 +41,14 @@ Chrome 148+ ships with built-in Gemini Nano via the Prompt API. Pick Nano as the
 
 The full arc of working with Customaise, one page at a time:
 
-1. **You spot it.** A friction point on a page you use every day.
-2. **You describe it.** One sentence. Point at the element, type in plain language, or use voice in 21 languages.
-3. **You see it work.** The AI writes the script, tests it on the live page, and installs it.
+1. **You spot it.** A page you want to change.
+2. **You describe it.** One sentence, in plain language. Or point at the element. Or use voice.
+3. **You see it work.** The first change lands. The AI writes the script, tests it on the live page, and installs it.
 4. **You improve it.** Stack more fixes. The script grows with you.
-5. **You go deeper.** Connect your IDE through the MCP server. Read, write, and debug from the same chat you ship code in.
-6. **Your agent joins in.** AgentScripts turn the page into tools your agent can call on your behalf.
+5. **You go deeper.** Bigger ask, same flow. Connect your IDE through the MCP server. Read, write, and debug from the same chat you ship code in.
+6. **You give your agent tools.** AgentScripts turn the page into tools your agent can call, in your signed-in browser session.
 7. **You control it.** Allow, prompt, or deny per tool. Approve sensitive calls from your phone if you're not at your desk.
-8. **You share it.** Publish once to your account, auto-updates for every subscriber.
+8. **You share it.** Publish once, auto-updates for every subscriber.
 
 ## For developers: MCP server
 
