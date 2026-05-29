@@ -4,7 +4,7 @@
 
 # Customaise
 
-### The web wasn't built for you. Fix that.
+### Custom programmable tools for every open tab. For you, or for your AI.
 
 [![Chrome Web Store](https://img.shields.io/badge/Chrome_Web_Store-Install-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/customaise/anmpijcpaobaabcdncjjmnhdeibipmko)
 [![npm](https://img.shields.io/npm/v/@customaise/mcp?style=for-the-badge&logo=npm&logoColor=white&label=MCP%20Server)](https://www.npmjs.com/package/@customaise/mcp)
@@ -32,6 +32,10 @@ Both run on the same metadata-block model, install the same way, and stay portab
 - **AgentScripts** expose the page as a set of tools any connected AI agent can call. Your IDE agent, your in-browser chat, or an autonomous runner can list and invoke those tools through your already-signed-in browser session, with a consent gate on anything sensitive.
 
 Same file, different surface. Pick the one that fits the problem.
+
+## On-device AI (Chrome 148+)
+
+Chrome 148+ ships with built-in Gemini Nano via the Prompt API. Pick Nano as the model in Chat for prompts that stay on your device, or declare `@grant CM_promptAI` in a script and call `await CM_promptAI(prompt, opts?)` directly. No API key, no per-call cost, no inference network call. Single-shot prompts, streaming, multi-turn sessions, and image and audio analysis are all supported.
 
 ## From spotting to sharing
 
@@ -80,9 +84,9 @@ Every capability a script or agent wants is declared up front and enforced by th
 
 ## Pricing
 
-- **Free.** 200K monthly in-browser AI tokens, full editor, full script lifecycle, Flash and Flash-Lite models.
-- **Power User.** £9 per month or £59 per year. 5M monthly in-browser tokens, MCP server, BYOK (bring your own Gemini key, unlimited in-browser AI), cross-device sync, cloud publishing, Gemini Pro, AgentScript publishing, remote HITL approvals.
-- **Token Packs.** £9 for 10M tokens, valid for 12 months. No subscription required.
+- **Free.** Full editor, full script lifecycle, monthly in-browser AI included.
+- **Power User.** From $9 / £7 / €9 per month (or $72 / £60 / €72 yearly). Unlocks the MCP server, cross-device sync, cloud publishing, AgentScript publishing, a larger in-browser AI allowance, and remote HITL approvals.
+- **Token Packs.** $9 / £7 / €9 for 10M tokens, valid for 12 months. No subscription required.
 
 [See full pricing](https://customaise.com/pricing)
 
