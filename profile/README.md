@@ -33,9 +33,25 @@ Both run on the same metadata-block model, install the same way, and stay portab
 
 Same file, different surface. Pick the one that fits the problem.
 
+## When there is no script: the Browser Agent
+
+Some jobs are not worth a script. Point the Browser Agent at the page and it drives the browser itself: reading the screen, clicking, typing, dragging, using keyboard shortcuts.
+
+Input arrives as real browser input rather than synthetic events, so canvas apps and sites that ignore scripted clicks respond to it the way they respond to you. An action it cannot carry out says so instead of reporting success.
+
+It runs on Gemini Computer Use, which exists only on Google's own models. On a model that cannot drive it, the tool is withheld and the reason is shown, rather than the agent quietly doing nothing.
+
 ## On-device AI (Chrome 148+)
 
 Chrome 148+ ships with built-in Gemini Nano via the Prompt API. Pick Nano as the model in Chat for prompts that stay on your device, or declare `@grant CM_promptAI` in a script and call `await CM_promptAI(prompt, opts?)` directly. No API key, no per-call cost, no inference network call. Single-shot prompts, streaming, multi-turn sessions, and image and audio analysis are all supported.
+
+## Bring your own model
+
+The Chat that writes your scripts does not have to run on our inference.
+
+- **Your own hardware.** Point Customaise at llama.cpp, Ollama, LM Studio or vLLM and that model joins the Chat model picker beside the cloud ones. Over localhost, or a Tailscale name when the machine is a rig in another room. Prompts go from the browser straight to your server, so they draw no tokens: the request never reaches us to be counted. Power User.
+- **Your own key.** Save a Google AI Studio or OpenRouter key on your Account page and pick any model that key serves. Hold both at once; each model runs on its own provider's key, billed by that provider.
+- **On-device.** Gemini Nano, as above. No key, no server, no inference network call at all.
 
 ## From spotting to sharing
 
