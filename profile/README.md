@@ -33,13 +33,15 @@ Both run on the same metadata-block model, install the same way, and stay portab
 
 Same file, different surface. Pick the one that fits the problem.
 
-## When there is no script: the Browser Agent
+## The Browser Agent tests your scripts
 
-Some jobs are not worth a script. Point the Browser Agent at the page and it drives the browser itself: reading the screen, clicking, typing, dragging, using keyboard shortcuts.
+Writing a script is the easy half. Knowing it actually works on the live page is the rest, and that is the Browser Agent's job.
 
-Input arrives as real browser input rather than synthetic events, so canvas apps and sites that ignore scripted clicks respond to it the way they respond to you. An action it cannot carry out says so instead of reporting success.
+When Chat builds or revises a script, it can deploy the Browser Agent to check the result. The agent reloads the page, drives it the way you would (clicking, typing, dragging, keyboard shortcuts), and reports PASS, FAIL, or INCONCLUSIVE against the criteria it was given, with the observations behind the verdict. "Clicking the dark mode toggle switches the background and leaves every label readable" is the shape of question it answers.
 
-It runs on Gemini Computer Use, which exists only on Google's own models. On a model that cannot drive it, the tool is withheld and the reason is shown, rather than the agent quietly doing nothing.
+Input arrives as real browser input rather than synthetic events, so canvas apps and sites that ignore scripted clicks respond to it the way they respond to you. An action it cannot carry out says so instead of reporting success, which is what makes a FAIL worth acting on.
+
+It runs on Gemini Computer Use, so it needs a Google model to drive it. On a model that cannot, the tool is withheld and the reason is shown.
 
 ## On-device AI (Chrome 148+)
 
