@@ -49,11 +49,11 @@ Chrome 148+ ships with built-in Gemini Nano via the Prompt API. Pick Nano as the
 
 ## Bring your own model
 
-The Chat that writes your scripts does not have to run on our inference.
+The Chat that writes your scripts does not have to run on our servers.
 
 - **Your own hardware.** Point Customaise at llama.cpp, Ollama, LM Studio or vLLM and that model joins the Chat model picker beside the cloud ones. Over localhost, or a Tailscale name when the machine is a rig in another room. Prompts go from the browser straight to your server, so they draw no tokens: the request never reaches us to be counted. Power User.
 - **Your own key.** Save a Google AI Studio or OpenRouter key on your Account page and pick any model that key serves. Hold both at once; each model runs on its own provider's key, billed by that provider.
-- **On-device.** Gemini Nano, as above. No key, no server, no inference network call at all.
+- **On-device.** Gemini Nano, covered in the section above. No key, no server, no network call.
 
 ## From spotting to sharing
 
