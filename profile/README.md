@@ -52,7 +52,7 @@ Chrome 148+ ships with built-in Gemini Nano via the Prompt API. Pick Nano as the
 The Chat that writes your scripts does not have to run on our servers.
 
 - **Your own hardware.** Point Customaise at llama.cpp, Ollama, LM Studio or vLLM and that model joins the Chat model picker beside the cloud ones. Over localhost, or a Tailscale name when the machine is a rig in another room. Prompts go from the browser straight to your server, so they draw no tokens: the request never reaches us to be counted. Power User.
-- **Your own key.** Save a Google AI Studio or OpenRouter key on your Account page and pick any model that key serves. Hold both at once; each model runs on its own provider's key, billed by that provider.
+- **Your own key.** Save a Google AI Studio or OpenRouter key on your Account page and pick any model that key serves. Hold both at once; each model runs on its own provider's key, billed by that provider. Power User.
 - **On-device.** Gemini Nano, covered in the section above. No key, no server, no network call.
 
 ## From spotting to sharing
@@ -83,7 +83,7 @@ If you already use an AI coding agent, connect it directly to Customaise. Read, 
 }
 ```
 
-**19 tools, 6 resources.** Script lifecycle, tab control, browser context, visual DOM targeting, screenshots with element highlighting, WebMCP tool calls with HITL consent. Works with Cursor, Claude Code, Codex, Windsurf, Kiro, Antigravity, and any MCP-compatible editor. Free includes 50 calls a day; Power User removes the limit.
+**19 tools, 5 resources and a script template.** Script lifecycle, tab control, browser context, visual DOM targeting, screenshots with element highlighting, WebMCP tool calls with HITL consent. Works with Claude Code, Cursor, Codex, Kiro, Antigravity, Claude Desktop and any MCP-compatible client, or as the `customaise` CLI for agents with a shell, including Grok Bot. Free includes 50 calls a day and 150 a week; Power User removes the limit.
 
 [MCP docs and source](https://github.com/getcustomaise/customaise-mcp) · [Package on npm](https://www.npmjs.com/package/@customaise/mcp)
 
@@ -91,19 +91,19 @@ If you already use an AI coding agent, connect it directly to Customaise. Read, 
 
 Every capability a script or agent wants is declared up front and enforced by the extension.
 
-- **`@grant` for browser APIs.** A script lists which `GM_*` APIs it needs; no declaration, no access. No `GM_xmlhttpRequest`, no network calls, full stop.
-- **`@connect` for network hosts.** Any request a script makes is gated to an explicit allowlist of hosts in the metadata block.
-- **SRI on `@require` and `@resource`.** Third-party code pulled in by a script is integrity-checked before it runs.
-- **Per-tool consent for AgentScripts.** Each WebMCP tool is `allow`, `prompt`, or `deny`. Prompt-gated tools pause and wait for your explicit OK, per call. "Always allow" and "Always deny" persist per script, per tool.
+- **`@grant` for browser APIs.** A script lists which `GM_*` APIs it needs; no declaration, no access. Without `GM_xmlhttpRequest`, a script can make only the requests the page itself could.
+- **`@connect` for network hosts.** Requests through `GM_xmlhttpRequest` go only to the hosts a script lists. A script that lists none asks you before reaching a new site, and so does a download from an unlisted site.
+- **SRI on `@require` and `@resource`.** Third-party code a script pulls in is checked against the hash its address declares.
+- **Per-tool consent for AgentScripts.** Each WebMCP tool is `allow`, `prompt`, or `deny`. Prompt-gated tools pause and wait for your explicit OK, per call. "Always allow" and "Always deny" persist per script, per tool. If you turn on Full access, eligible prompt tools run without asking; denied tools stay blocked.
 - **Remote HITL.** Sensitive calls can route to your Account Portal and wait for approval from any signed-in browser, including your phone. Tool arguments are KMS-encrypted at rest.
 - **Origin-locked MCP bridge.** The local WebSocket the MCP server uses only accepts connections from known Customaise extension IDs. A random webpage cannot reach it.
-- **Restore points on every edit.** Unlimited undo. Nothing is ever lost.
+- **Restore points on every edit.** Unlimited undo.
 - **On-device chat encryption.** AES-256-GCM with a key only you control. Your prompts are never used to train models.
 
 ## Pricing
 
-- **Free.** Full editor, full script lifecycle, monthly in-browser AI included.
-- **Power User.** From $9 / £7 / €9 per month (or $72 / £60 / €72 yearly). Unlocks the MCP server, cross-device sync, cloud publishing, AgentScript publishing, a larger in-browser AI allowance, and remote HITL approvals.
+- **Free.** Full editor, full script lifecycle, monthly in-browser AI, and 50 MCP or CLI calls a day (150 a week).
+- **Power User.** $9 / £7 / €9 a month, or $72 / £60 / €72 a year. Unlimited MCP and CLI, cross-device sync, publishing and Send links, your own AI keys and model servers, Script Decisions, a larger in-browser AI allowance and remote HITL approvals.
 - **Token Packs.** $9 / £7 / €9 for 10M tokens, valid for 12 months. No subscription required.
 
 [See full pricing](https://customaise.com/pricing)
