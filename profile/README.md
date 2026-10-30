@@ -83,7 +83,7 @@ If you already use an AI coding agent, connect it directly to Customaise. Read, 
 }
 ```
 
-**18 tools, 5 resources.** Script lifecycle, tab control, browser context, visual DOM targeting, screenshots with element highlighting, WebMCP tool calls with HITL consent. Works with Cursor, Claude Code, Codex, Windsurf, Kiro, Antigravity, and any MCP-compatible editor. Power User plan required.
+**19 tools, 6 resources.** Script lifecycle, tab control, browser context, visual DOM targeting, screenshots with element highlighting, WebMCP tool calls with HITL consent. Works with Cursor, Claude Code, Codex, Windsurf, Kiro, Antigravity, and any MCP-compatible editor. Free includes 50 calls a day; Power User removes the limit.
 
 [MCP docs and source](https://github.com/getcustomaise/customaise-mcp) · [Package on npm](https://www.npmjs.com/package/@customaise/mcp)
 
