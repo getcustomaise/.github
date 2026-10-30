@@ -26,7 +26,7 @@ No coding. No developer tools. No tickets to file. You see a problem, you descri
 
 ## Two shapes of one format
 
-Both run on the same metadata-block model, install the same way, and stay portable by design. Export anywhere, anytime.
+Both run on the same metadata-block model and install the same way. UserScripts stay portable: export a .user.js and it runs in any compatible manager.
 
 - **UserScripts** reshape how a page looks and behaves. Hide the chrome, add an export button, force dark mode, automate the seventh click. The format has run on the web for twenty years; the new piece is the in-browser AI that writes and revises scripts for you.
 - **AgentScripts** expose the page as a set of tools any connected AI agent can call. Your IDE agent, your in-browser chat, or an autonomous runner can list and invoke those tools through your already-signed-in browser session, with a consent gate on anything sensitive.
